@@ -2,10 +2,23 @@
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
 
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] Loaded HTML Templates (2): 
+	- 
+	- index.html
+
 [GIN-debug] GET    /test                     --> main.main.func1 (5 handlers)
-[GIN-debug] GET    /videos                   --> main.main.func2 (5 handlers)
-[GIN-debug] POST   /videos                   --> main.main.func3 (5 handlers)
+[GIN-debug] GET    /api/videos               --> main.main.func2 (5 handlers)
+[GIN-debug] POST   /api/videos               --> main.main.func3 (5 handlers)
+[GIN-debug] GET    /view/videos              --> golang-gin-poc/controller.VideoController.ShowAll-fm (5 handlers)
 [GIN-debug] Listening and serving HTTP on :8080
-::1 - [08 Dec 20 18:32 +0545] POST  /videos 400 495.469µs 
-::1 - [08 Dec 20 18:32 +0545] POST  /videos 400 306.044µs 
-::1 - [08 Dec 20 18:32 +0545] POST  /videos 200 222.828µs 
+::1 - [08 Dec 20 18:59 +0545] GET  /view/videos 200 510.603µs 
+::1 - [08 Dec 20 18:59 +0545] GET  /view/videos 200 414.853µs 
+::1 - [08 Dec 20 18:59 +0545] GET  /view/videos 200 477.19µs 
+::1 - [08 Dec 20 18:59 +0545] GET  /view/videos 200 445.661µs 
+::1 - [08 Dec 20 18:59 +0545] GET  /view/videos 200 467µs 
+::1 - [08 Dec 20 18:59 +0545] POST  /videos 404 178.006µs 
+::1 - [08 Dec 20 18:59 +0545] POST  /videos 404 185.96µs 
+::1 - [08 Dec 20 18:59 +0545] POST  /videos 404 158.388µs 
+::1 - [08 Dec 20 18:59 +0545] GET  /view/videos 200 445.439µs 
